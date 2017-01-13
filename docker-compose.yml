@@ -1,0 +1,24 @@
+version: '2'
+services:
+    gateway:
+        build: ./API-Gateway/
+        ports:
+        - "80:80"
+        links:
+        - service1
+        - service2
+        image: mycontainerregistry-on.azurecr.io/images/demo-gateway
+    rabbit:
+        image: rabbitmq:3-management
+        ports:
+        - "8080:15672"
+    service1:
+        build: ./MicroService-01/
+        ports:
+        - "3000"
+        image: mycontainerregistry-on.azurecr.io/images/demo-service1
+    service2:
+        build: ./MicroService-02/
+        ports:
+        - "4000"
+        image: mycontainerregistry-on.azurecr.io/images/demo-service2
