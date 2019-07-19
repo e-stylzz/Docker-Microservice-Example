@@ -1,3 +1,5 @@
-./API-Gateway/node_modules
-./MicroService-01/node_modules
-./MicroService-02/node_modules
+/API-Gateway/node_modules
+/MicroService-01/node_modules
+/MicroService-02/node_modules
+/Consumer/node_modules
+/Consumer/config.js

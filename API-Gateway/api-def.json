@@ -1,34 +1,40 @@
-[{
-	"host": "service1",
-    "port": "3000",
-    "service": "service 1",
-	"redirects":[{
-		"path": "/animals",
-		"method": "get"
+[
+	{
+		"host": "service1",
+		"port": "4001",
+		"service": "service 1",
+		"redirects":[
+			{
+				"path": "/animals",
+				"method": "get"
+			},
+			{
+				"path": "/animal/:id",
+				"method": "get"
+			},
+			{
+				"path": "/animal",
+				"method": "post"
+			}
+		]
 	},
-    {
-		"path": "/animal/:id",
-		"method": "get"
-	},
-    {
-        "path": "/animal",
-        "method": "post"
-    }]
-},
-{
-	"host": "service2",
-    "port": "4000",
-    "service": "service 2",
-	"redirects":[{
-		"path": "/user",
-		"method": "get"
-	},
-    {
-		"path": "/user/:id",
-		"method": "get"
-	},
-    {
-        "path": "/user",
-        "method": "post"
-    }]
-}]
+	{
+		"host": "service2",
+		"port": "4002",
+		"service": "service 2",
+		"redirects":[
+			{
+				"path": "/user",
+				"method": "get"
+			},
+			{
+				"path": "/user/:id",
+				"method": "get"
+			},
+			{
+				"path": "/user",
+				"method": "post"
+			}
+		]
+	}
+]
